@@ -4,7 +4,7 @@ import SectionHeading from '../components/SectionHeading.jsx'
 function ContactSection() {
   return (
     <Reveal as="section" id="contact" variant="scale" className="min-h-[76vh] border-t border-white/6 px-5 pb-8 pt-24 sm:px-8 lg:px-10">
-      <div>
+      <div className="mx-auto w-full max-w-[1280px]">
         <SectionHeading
           eyebrow="Contact"
           title="Let&apos;s connect."

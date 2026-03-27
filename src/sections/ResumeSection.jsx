@@ -17,7 +17,7 @@ const resumeItems = [
 function ResumeSection() {
   return (
     <Reveal as="section" id="resume" variant="right" className="min-h-[88vh] border-t border-white/6 px-5 py-24 sm:px-8 lg:px-10">
-      <div>
+      <div className="mx-auto w-full max-w-[1280px]">
         <SectionHeading
           eyebrow="Resume"
           title="Experience snapshot."
@@ -35,10 +35,10 @@ function ResumeSection() {
               <p className="text-xs uppercase tracking-[0.28em] text-[#a47bff]">
                 {item.year}
               </p>
-              <h3 className="mt-4 text-xl font-semibold text-white">
+              <h3 className="mt-4 text-2xl font-semibold text-white">
                 {item.title}
               </h3>
-              <p className="mt-3 text-sm leading-6 text-slate-300 sm:text-base">
+              <p className="mt-3 text-base leading-7 text-slate-300 sm:text-lg">
                 {item.description}
               </p>
             </Reveal>

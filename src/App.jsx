@@ -7,7 +7,7 @@ import SkillsSection from './sections/SkillsSection.jsx'
 
 function App() {
   return (
-    <main className="relative overflow-hidden">
+    <main className="relative overflow-hidden bg-[#0b1018]">
       <div className="pointer-events-none absolute inset-0 opacity-90">
         <div className="absolute left-[-8rem] top-[6rem] h-[24rem] w-[24rem] rounded-full bg-[radial-gradient(circle,_rgba(255,111,145,0.18),_transparent_68%)] blur-3xl" />
         <div className="absolute right-[-8rem] top-[24rem] h-[24rem] w-[24rem] rounded-full bg-[radial-gradient(circle,_rgba(123,223,246,0.16),_transparent_68%)] blur-3xl" />

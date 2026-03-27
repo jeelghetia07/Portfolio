@@ -17,7 +17,7 @@ function SkillsSection() {
 
   return (
     <Reveal as="section" id="skills" variant="scale" className="min-h-[88vh] border-t border-white/6 px-5 py-24 sm:px-8 lg:px-10">
-      <div>
+      <div className="mx-auto w-full max-w-[1280px]">
         <SectionHeading
           eyebrow="Skills"
           title="Tech stack in motion."
