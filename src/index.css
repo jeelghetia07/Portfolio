@@ -10,10 +10,7 @@ html {
 body {
   margin: 0;
   min-width: 320px;
-  background:
-    radial-gradient(circle at 14% 12%, rgba(164, 123, 255, 0.12), transparent 24%),
-    radial-gradient(circle at 84% 20%, rgba(120, 182, 255, 0.10), transparent 24%),
-    linear-gradient(180deg, #08090f 0%, #0d111a 48%, #08090f 100%);
+  background: #08090f;
   color: #eef6ff;
   font-family: var(--font-body);
   text-rendering: optimizeLegibility;
