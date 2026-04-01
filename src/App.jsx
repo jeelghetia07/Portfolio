@@ -79,8 +79,8 @@ function SpaceCanvas() {
     const stars = Array.from({ length: STAR_COUNT }, () => ({
       x: Math.random() * window.innerWidth,
       y: Math.random() * document.documentElement.scrollHeight,
-      r: Math.random() * 1.4 + 0.2,
-      alpha: Math.random() * 0.7 + 0.15,
+      r: Math.random() * 1.8 + 0.4,
+      alpha: Math.random() * 0.5 + 0.45,
       twinkleSpeed: Math.random() * 0.012 + 0.004,
       twinkleOffset: Math.random() * Math.PI * 2,
     }))
@@ -114,14 +114,20 @@ function SpaceCanvas() {
       shooters.push({
         x: Math.random() * window.innerWidth * 1.2 - window.innerWidth * 0.1,
         y: Math.random() * document.documentElement.scrollHeight * 0.5,
-        vx: Math.cos(angle) * (5 + Math.random() * 5),
-        vy: Math.sin(angle) * (5 + Math.random() * 5),
-        len: 120 + Math.random() * 100,
+        vx: Math.cos(angle) * (6 + Math.random() * 6),
+        vy: Math.sin(angle) * (6 + Math.random() * 6),
+        len: 180 + Math.random() * 140,
         alpha: 1,
         life: 1,
       })
     }
-    setInterval(spawnShooter, 3200 + Math.random() * 2000)
+    // Spawn one immediately, then every 1.2–2s for frequent comets
+    spawnShooter()
+    const spawnInterval = setInterval(() => {
+      spawnShooter()
+      // Occasionally spawn a second one right after for a burst feel
+      if (Math.random() > 0.6) setTimeout(spawnShooter, 300)
+    }, 1200 + Math.random() * 800)
 
     /* ── Render ── */
     let t = 0
@@ -181,11 +187,12 @@ function SpaceCanvas() {
           s.x - s.vx * (s.len / Math.hypot(s.vx, s.vy)),
           s.y - s.vy * (s.len / Math.hypot(s.vx, s.vy))
         )
-        grad.addColorStop(0, `rgba(255,255,255,${s.life * 0.9})`)
-        grad.addColorStop(0.3, `rgba(164,123,255,${s.life * 0.5})`)
+        grad.addColorStop(0, `rgba(255,255,255,${s.life * 1.0})`)
+        grad.addColorStop(0.2, `rgba(200,170,255,${s.life * 0.7})`)
+        grad.addColorStop(0.5, `rgba(164,123,255,${s.life * 0.35})`)
         grad.addColorStop(1, 'transparent')
         ctx.strokeStyle = grad
-        ctx.lineWidth = 1.5
+        ctx.lineWidth = 4.5
         ctx.beginPath()
         ctx.moveTo(s.x, s.y)
         ctx.lineTo(
@@ -203,6 +210,7 @@ function SpaceCanvas() {
 
     return () => {
       cancelAnimationFrame(animId)
+      clearInterval(spawnInterval)
       window.removeEventListener('resize', resize)
     }
   }, [])

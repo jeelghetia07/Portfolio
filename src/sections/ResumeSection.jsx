@@ -30,7 +30,7 @@ function ResumeSection() {
       as="section"
       id="resume"
       variant="right"
-      className="relative min-h-[88vh] overflow-hidden px-5 py-28 sm:px-8 lg:px-10"
+      className="relative min-h-[80vh] overflow-hidden px-5 pb-20 pt-10 sm:px-8 sm:pb-24 sm:pt-12 lg:px-10"
     >
       {/* Section nebula */}
       <div className="pointer-events-none absolute right-0 top-1/4 h-[28rem] w-[28rem] rounded-full bg-[radial-gradient(circle,rgba(164,123,255,0.07),transparent_70%)] blur-3xl" />
