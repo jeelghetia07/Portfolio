@@ -76,7 +76,7 @@ function HeroSection() {
                     '--hero-width': '20ch',
                   }}
                 >
-                  Hii, I&apos;m Jeel Ghetia
+                  Hi, I&apos;m Jeel Ghetia
                 </h1>
               </div>
               <div className="hero-sweep-wrap flex justify-center">
