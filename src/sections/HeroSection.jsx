@@ -10,9 +10,9 @@ const navItems = [
 ]
 
 const socialLinks = [
-  { label: 'GitHub',    href: 'https://github.com/',    icon: FaGithub    },
-  { label: 'LinkedIn',  href: 'https://linkedin.com/',  icon: FaLinkedinIn },
-  { label: 'Instagram', href: 'https://instagram.com/', icon: FaInstagram  },
+  { label: 'GitHub',    href: 'https://github.com/jeelghetia07',    icon: FaGithub    },
+  { label: 'LinkedIn',  href: 'https://www.linkedin.com/in/jeel-ghetia-a6849b316/',  icon: FaLinkedinIn },
+  { label: 'Instagram', href: 'https://instagram.com/jeel_ghetia_', icon: FaInstagram  },
 ]
 
 function HeroSection() {
