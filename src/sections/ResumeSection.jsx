@@ -1,9 +1,8 @@
 import Reveal from '../components/Reveal.jsx'
-import SectionHeading from '../components/SectionHeading.jsx'
 
 const resumeItems = [
   {
-    year: '2025 – Present',
+    year: '2025 - Present',
     title: 'Software Developer',
     description: 'Building interactive frontend experiences and personal projects focused on clean UI and smooth motion.',
   },
@@ -13,8 +12,8 @@ const resumeItems = [
     description: 'Strong interest in modern layouts, animations, and user flow. Always chasing pixel-perfect results.',
   },
   {
-    year: '2024 – Present',
-    title: 'B.Tech CSE — PDEU',
+    year: '2024 - Present',
+    title: 'B.Tech CSE - PDEU',
     description: 'Computer Science and Engineering at Pandit Deendayal Energy University, Gandhinagar.',
   },
   {
@@ -32,15 +31,20 @@ function ResumeSection() {
       variant="right"
       className="relative min-h-[80vh] overflow-hidden px-5 pb-20 pt-10 sm:px-8 sm:pb-24 sm:pt-12 lg:px-10"
     >
-      {/* Section nebula */}
       <div className="pointer-events-none absolute right-0 top-1/4 h-[28rem] w-[28rem] rounded-full bg-[radial-gradient(circle,rgba(164,123,255,0.07),transparent_70%)] blur-3xl" />
 
       <div className="relative z-10 mx-auto w-full max-w-[1280px]">
-        <SectionHeading
-          eyebrow="Resume"
-          title="Experience snapshot."
-          description="A growing timeline of what I've built, learned, and where I'm headed."
-        />
+        <div className="max-w-3xl">
+          <p className="text-sm font-semibold uppercase tracking-[0.3em] text-[#a47bff] sm:text-base">
+            Resume
+          </p>
+          <h2 className="mt-3 font-[var(--font-display)] text-[2.2rem] leading-[1.02] text-white sm:text-[2.8rem]">
+            Experience snapshot.
+          </h2>
+          <p className="mt-4 max-w-2xl text-base leading-8 text-slate-300 sm:text-lg">
+            A growing timeline of what I&apos;ve built, learned, and where I&apos;m headed.
+          </p>
+        </div>
 
         <div className="mt-12 grid gap-6 lg:grid-cols-2">
           {resumeItems.map((item, index) => (
@@ -50,7 +54,6 @@ function ResumeSection() {
               delay={index * 120}
               className="group relative overflow-hidden rounded-2xl border border-white/6 bg-white/2 p-6 transition-all duration-300 hover:border-[#a47bff]/30 hover:bg-[#a47bff]/4"
             >
-              {/* Accent left bar */}
               <div className="absolute left-0 top-0 h-full w-[2px] rounded-l-2xl bg-gradient-to-b from-[#a47bff]/60 via-[#a47bff]/20 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
 
               <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[#a47bff]">
@@ -66,13 +69,9 @@ function ResumeSection() {
           ))}
         </div>
 
-        {/* Download CTA */}
         <Reveal variant="up" delay={480} className="mt-10">
-          <a
-            href="#"
-            className="simple-button-secondary inline-flex"
-          >
-            Download Full Resume →
+          <a href="#" className="simple-button-secondary inline-flex">
+            Download Full Resume -
           </a>
         </Reveal>
       </div>
